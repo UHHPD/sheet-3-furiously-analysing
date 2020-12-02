@@ -74,8 +74,11 @@ for(unsigned int k = 0 ; k < daten.size() ; ++k){
 lambda = prob(daten,mu_true) / denominator;
 cout << "likelihood ratio: \n";
 cout << lambda << endl;
+cout << "ln(likelihood ratio): \n";
+cout << -2* log(lambda) << endl;
 
 double z;
 z = (-2* log(lambda) - 233) / (sqrt(466));
+cout << "rel. deviation from chi^2: \n";
 cout << z << endl;
 }    
